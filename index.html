@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        /* General Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        /* Body Styling */
+        
+        body {
+            background: url(https://i.pinimg.com/736x/46/14/5e/46145e225b80b143c6661763c9ceb9bd.jpg);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Container Styling */
+        
+        .container {
+            backdrop-filter: blur(1px);
+            background: transparent (blur 1px);
+            width: 300px;
+            padding: 1px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        /* Profile Logo */
+        
+        .profile-logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: url('https://i.pinimg.com/736x/b1/3a/05/b13a05aa95c371cac9907424a32865bb.jpg') no-repeat center;
+            background-size: cover;
+        }
+        /* Heading */
+        
+        h2 {
+            margin: 15px 0;
+            color: #333;
+        }
+        /* Input Fields */
+        
+        input[type="email"],
+        input[type="password"] {
+            width: 85%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        /* Links */
+        
+        a {
+            display: block;
+            margin: 8px 0;
+            color: #fcfcfc;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Buttons */
+        
+        .btn {
+            width: 85%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #052144;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: rgba(0085FF, 003465, 000000, 0.2);
+        }
+        /* Separator Text */
+        
+        .or {
+            margin: 10px 0;
+            font-size: 13px;
+            color: #f8f8f8;
+        }
+        /* Social Login Icons */
+        
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .social-login img {
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-login img:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        /* Footer Section */
+        
+        .register-section {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #ffffff;
+        }
+        
+        .register-section a {
+            color: #f1f5f1;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .register-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-logo"> <img src="https://i.pinimg.com/736x/70/1e/50/701e50103ebb4a8c0901a0b401da9ffa.jpg" width="70px" height="70px" alt="logo"></div>
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <a href="/forgot-password">Forgot Password?</a>
+            <button class="btn btn-primary" type="submit">Sign In</button>
+        </form>
+        <p class="or">Or continue with</p>
+        <div class="social-login">
+            <a href="https://accounts.google.com/" target="_blank">
+                <img src="https://i.pinimg.com/736x/79/fb/38/79fb381ce1ed40ebef050dc0a16d0386.jpg" alt="Google">
+            </a>
+            <a href="https://github.com/login" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+            </a>
+            <a href="https://www.facebook.com/login/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+        <div class="register-section">
+            Don't have an account yet?<a href="/register">Register for free</a>
+        </div>
+    </div>
+</body>
+
+</html>
